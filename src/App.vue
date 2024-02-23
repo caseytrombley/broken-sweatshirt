@@ -1,27 +1,32 @@
-<script setup>
-import AudioButton from './components/AudioButton.vue'
-
-
-</script>
-
 <template>
-  <div>
-    <h1 class="logo">Broken Sweatshirt</h1>
+  <div id="app">
+<!--    <nav>-->
+<!--      <router-link to="/">Home</router-link> |-->
+<!--      <router-link to="/about">About</router-link>-->
+<!--    </nav>-->
+    <router-view/>
   </div>
-  <audio-button />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
